@@ -1,73 +1,72 @@
-# Welcome to your Lovable project
+# 🔥 Roast & Rise
 
-## Project info
+**The brutally honest AI confidence coach.**
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+Roast & Rise is an AI-powered platform designed to provide tough love and actionable feedback. Upload your resume, LinkedIn profile, or even a profile picture, and our AI personas will "roast" you—then give you the tools and advice you need to "rise" above your competition.
 
-## How can I edit this code?
+![Roast & Rise Banner]
 
-There are several ways of editing your application.
+## 🚀 Features
 
-**Use Lovable**
+- **Multiple Roaster Personas**: Choose your critic—from a ruthless Silicon Valley VC to a disappointed mom.
+- **Roast & Rise Methodology**: Receive brutal feedback followed by specific, actionable "Quick Wins" for improvement.
+- **Visual Scoring**: Get an overall score and sub-scores for your "Hireability," "Vibe," and "Confidence."
+- **Easy Sharing**: Generate and share your results to the community.
+- **Premium Design**: Built with a modern, high-contrast, "neo-brutalist" aesthetic.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+## 🛠️ Technology Stack
 
-Changes made via Lovable will be committed automatically to this repo.
+- **Frontend**: [React](https://reactjs.org/) + [Vite](https://vitejs.dev/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **UI Components**: [shadcn/ui](https://ui.shadcn.com/)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
 
-**Use your preferred IDE**
+## 📦 Getting Started
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Prerequisites
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- [Node.js](https://nodejs.org/) (v18.x or higher)
+- [npm](https://www.npmjs.com/) or [bun](https://bun.sh/)
 
-Follow these steps:
+### Installation
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+1. **Clone the repository**
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+   ```bash
+   git clone https://github.com/ShivamH1/Roast-Rise.git
+   cd Roast-Rise
+   ```
 
-# Step 3: Install the necessary dependencies.
-npm i
+2. **Install dependencies**
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+   ```bash
+   npm install
+   # or
+   bun install
+   ```
 
-**Edit a file directly in GitHub**
+3. **Start the development server**
+   ```bash
+   npm run dev
+   # or
+   bun run dev
+   ```
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+The app will be available at `http://localhost:5173`.
 
-**Use GitHub Codespaces**
+## 📂 Project Structure
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+- `src/components`: Reusable UI components including the custom `Logo`.
+- `src/pages`: Main application screens (Index, Results, NotFound).
+- `src/hooks`: Custom React hooks for state and interactions.
+- `public/`: Static assets like the branded favicon.
 
-## What technologies are used for this project?
+## 📄 License
 
-This project is built with:
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+---
 
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+_Built for those who can handle the heat. 🔥_
