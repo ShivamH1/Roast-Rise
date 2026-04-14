@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 96%;
+    --foreground: 0 0% 5%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 5%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 5%;
+
+    --primary: 48 100% 50%;
+    --primary-foreground: 0 0% 5%;
+
+    --secondary: 0 0% 94%;
+    --secondary-foreground: 0 0% 5%;
+
+    --muted: 0 0% 94%;
+    --muted-foreground: 0 0% 40%;
+
+    --accent: 12 90% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 5%;
+    --input: 0 0% 5%;
+    --ring: 48 100% 50%;
+
+    --radius: 1rem;
+
+    --roast-fire: 12 90% 55%;
+    --roast-burn: 0 80% 50%;
+    --roast-gold: 48 100% 50%;
+    --roast-dark: 0 0% 5%;
+    --roast-live: 0 80% 55%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 0 0% 6%;
+    --foreground: 0 0% 95%;
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 95%;
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 48 100% 50%;
+    --primary-foreground: 0 0% 5%;
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 95%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 60%;
+    --accent: 12 90% 55%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 95%;
+    --border: 0 0% 25%;
+    --input: 0 0% 25%;
+    --ring: 48 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer utilities {
+  /* Spotrz-style heavy card */
+  .spotrz-card {
+    @apply rounded-2xl border-[3px] border-foreground bg-card p-6;
+  }
+
+  /* Pill badge like "FOOTBALL", "LIVE" */
+  .spotrz-pill {
+    @apply inline-flex items-center gap-1.5 rounded-full border-[2px] border-foreground px-3 py-1 text-xs font-display font-bold uppercase tracking-wide;
+  }
+
+  .spotrz-pill-filled {
+    @apply inline-flex items-center gap-1.5 rounded-full bg-primary px-4 py-1.5 text-xs font-display font-bold uppercase tracking-wide text-primary-foreground border-[2px] border-foreground;
+  }
+
+  /* Dashed separator like in match cards */
+  .spotrz-divider {
+    border-top: 2px dashed hsl(var(--muted-foreground) / 0.3);
+  }
+
+  /* Score box like match scores */
+  .spotrz-score-box {
+    @apply flex h-12 w-12 items-center justify-center rounded-xl border-[2px] border-foreground font-display text-xl font-bold;
+  }
+
+  .spotrz-score-box-active {
+    @apply spotrz-score-box bg-primary text-primary-foreground;
+  }
+
+  /* Fire gradient header */
+  .fire-header {
+    background: hsl(var(--roast-gold));
+    @apply border-b-[4px] border-foreground;
+  }
+
+  .fire-text {
+    background: linear-gradient(135deg, hsl(var(--roast-gold)), hsl(var(--roast-fire)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Live indicator dot */
+  .live-dot {
+    @apply h-2.5 w-2.5 rounded-full bg-red-500;
+    animation: pulse-live 1.5s ease-in-out infinite;
+  }
+}
+
+@keyframes pulse-live {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+@keyframes flame-flicker {
+  0%, 100% { transform: scaleY(1) scaleX(1); opacity: 1; }
+  50% { transform: scaleY(1.1) scaleX(0.95); opacity: 0.8; }
+}
+
+.animate-flame-flicker {
+  animation: flame-flicker 0.8s ease-in-out infinite;
+}
