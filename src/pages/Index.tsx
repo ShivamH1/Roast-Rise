@@ -31,7 +31,7 @@ export default function Index() {
       formData.append("persona", persona);
       formData.append("file", file);
 
-      const url = `http://localhost:3000/api/roast`;
+      const url = `/api/roast`;
       const res = await fetch(url, {
         method: "POST",
         body: formData,
